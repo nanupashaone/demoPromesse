@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de contact</title>
+    <style>
+        body { 
+        font-family: Arial, sans-serif; 
+        }
+
+        form {
+            width: max-content;
+            margin: 25px;
+            background-color: rgb(171, 171, 245);
+            
+        }
+
+        .label {
+            display: flex;
+            flex-direction: column;
+            
+            padding: 10px;
+        }
+        
+        .label input[type="button"] {
+            margin: 0 25px 0 25px;
+            align-items: center;
+            width: 70%;
+            padding: 5px 0 5px 0;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Ajouter un contact</h1>
+
+    <form>
+        <div class="label">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+        </div>   
+        <div class="label">
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required>
+        </div>
+        
+        <div class="label">
+            <label for="dateNaissance">Date de Naissance:</label>
+            <input type="date" id="dateNaissance" name="dateNaissance" required>
+        </div>
+        
+        <div class="label">
+            <label for="telephone">Numéro de téléphone:</label>
+            <input type="tel" id="telephone" name="telephone" required>
+        </div>    
+        <div class="label">
+            <input type="button" value="Ajouter Contact" onclick="contactAjout()">
+            <input type="button" value="Supprimer Contact" id="DeleteContact">
+        </div>    
+    </form>
+
+    <div id="listeUpdate"> 
+        <h3>Liste ajoutée</h3>
+        <ul id="listeContacts">
+            <li></li>
+        </ul>
+    </div>  
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
